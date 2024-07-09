@@ -1,0 +1,21 @@
+<div class="container animate__animated animate__fadeIn" id="work-experience">
+  <h2 class="text-center mb-5">Work Experience</h2>
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let experience of workExperiences">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex align-items-start">
+          <img src="{{ experience.logo }}" alt="{{ experience.company }} Logo" class="company-logo mr-3">
+          <div>
+            <h4 class="card-title">{{ experience.title }}</h4>
+            <p class="card-subtitle mb-2 text-muted">{{ experience.company }}</p>
+            <p class="card-text"><small>{{ experience.duration }}</small></p>
+            <p class="card-text">{{ experience.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a class="btn btn-primary btn-lg" href="assets/resume.pdf" target="_blank" role="button">View My Resume</a>
+  </div>
+</div>

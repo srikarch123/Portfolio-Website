@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+html {
+  scroll-behavior: smooth;
+}
+.footer {
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+}
+
+section {
+  padding: 60px 0;
+}

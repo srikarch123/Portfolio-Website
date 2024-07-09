@@ -1,0 +1,21 @@
+<div class="container text-center animate__animated animate__fadeIn" id="projects">
+  <h2 class="mb-4">Projects</h2>
+  <p class="h3 mb-5 fw-light">I love to create things, and I'm always working on something new! You can view some of my favorite projects below.</p>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let project of projects">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ project.image }}" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <div *ngIf="project.hasDemo">
+            <a href="{{ project.link }}" class="btn btn-primary" target="_blank">View Demo</a>
+          </div>
+          <a href="{{ project.source }}" class="btn btn-outline-secondary ml-auto" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

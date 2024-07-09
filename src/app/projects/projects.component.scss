@@ -1,0 +1,38 @@
+#projects {
+    padding: 60px 0;
+  
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+  
+    .card-text {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card-footer .btn-outline-secondary {
+      margin-left: auto;
+    }
+  }
+
+  
+  

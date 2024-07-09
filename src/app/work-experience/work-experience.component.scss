@@ -1,0 +1,26 @@
+#work-experience {
+    padding: 60px 0;
+  
+    .card {
+      transition: transform 0.3s ease;
+    }
+  
+    .card:hover {
+      transform: translateY(-10px);
+    }
+  
+    .card-title {
+      margin-bottom: 0.5rem;
+    }
+  
+    .card-subtitle {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+  }
+  .company-logo {
+    height:100px; // Adjust the height as needed
+    width: 100px;
+    margin-right: 15px; // Add some margin to the right
+  }    
+  
