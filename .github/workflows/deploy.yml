@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Portfolio-Website CI/CD
 
 on:
   push:
@@ -8,27 +8,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Install Project Dependencies
-        run: npm ci
-        working-directory: Portfolio-Website
-
-      - name: Build Angular Project
-        run: npx ng build --configuration production
-        working-directory: Portfolio-Website
-
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.4
+      - name: SSH into Server and Deploy
+        uses: appleboy/ssh-action@v0.1.1
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Deploy to Server
-        run: |
-          scp -o StrictHostKeyChecking=no -r Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
-          ssh -o StrictHostKeyChecking=no srikar@76.84.212.254 << 'EOF'
-            /home/srikar/deploy.sh
-          EOF
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/srikar/Portfolio-Website
+            git pull origin master
+            npm ci
+            npx ng build --configuration production
+            cd /home/srikar/
+            ./deploy.sh
