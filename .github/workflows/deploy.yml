@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set Working Directory
-        run: echo "Working Directory: /home/srikar/Portfolio-Website"
+        run: echo
+        Working Directory: /home/srikar/Portfolio-Website"
       
       - name: Install Project Dependencies
         run: npm ci
