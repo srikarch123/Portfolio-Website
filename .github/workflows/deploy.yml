@@ -20,9 +20,12 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -ex
+            ssh -vvv -i /path/to/private/key $USER@$HOST
             cd /home/srikar/Portfolio-Website
             git pull origin master
             npm install
             npx ng build --configuration production
             cd /home/srikar/
             ./deploy.sh
+
