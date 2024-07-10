@@ -15,11 +15,11 @@ jobs:
 
     - name: Install Project Dependencies
       run: npm ci
-      working-directory: /home/srikar/Portfolio-Website
+      working-directory: ./Portfolio-Website
 
     - name: Build Angular Project
       run: npx ng build --configuration production
-      working-directory: /home/srikar/Portfolio-Website
+      working-directory: ./Portfolio-Website
 
     - name: Setup SSH
       uses: webfactory/ssh-agent@v0.5.4
@@ -28,7 +28,7 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp -o StrictHostKeyChecking=no -r /home/srikar/Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
+        scp -o StrictHostKeyChecking=no -r ./Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
         ssh -o StrictHostKeyChecking=no srikar@76.84.212.254 << 'EOF'
           /home/srikar/deploy.sh
         EOF
