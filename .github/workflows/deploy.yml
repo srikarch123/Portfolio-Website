@@ -1,4 +1,4 @@
-name: Portfolio-Website CI/CD
+name: Test CI/CD
 
 on:
   push:
@@ -6,22 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: SSH into Server and Deploy
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /home/srikar/Portfolio-Website
-            npm ci
-            npx ng build --configuration production
-            cd /home/srikar/
-            ./deploy.sh
+      - name: Run a One-Liner Script
+        run: echo "Hello, World!"
