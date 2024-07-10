@@ -22,7 +22,7 @@ jobs:
           script: |
             cd /home/srikar/Portfolio-Website
             git pull origin master
-            npm ci
+            npm install
             npx ng build --configuration production
             cd /home/srikar/
             ./deploy.sh
