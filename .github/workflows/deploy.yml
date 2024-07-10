@@ -31,7 +31,7 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp -o StrictHostKeyChecking=no -r /home/srikar/Portfolio-Website/dist/portfolio-website/* srikar@your_server_ip:/path/to/nginx/html
-        ssh -o StrictHostKeyChecking=no srikar@your_server_ip << 'EOF'
+        scp -o StrictHostKeyChecking=no -r /home/srikar/Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
+        ssh -o StrictHostKeyChecking=no srikar@76.84.212.254 << 'EOF'
           /home/srikar/deploy.sh
         EOF
