@@ -10,28 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-    - name: Set Working Directory
-      run: echo "Working Directory: /home/srikar/Portfolio-Website"
+      - name: Set Working Directory
+        run: echo "Working Directory: /home/srikar/Portfolio-Website"
       
-    - name: Install Project Dependencies
-      run: npm ci
-      working-directory: /home/srikar/Portfolio-Website
+      - name: Install Project Dependencies
+        run: npm ci
+        working-directory: /home/srikar/Portfolio-Website
 
-    - name: Build Angular Project
-      run: npx ng build --configuration production
-      working-directory: /home/srikar/Portfolio-Website
+      - name: Build Angular Project
+        run: npx ng build --configuration production
+        working-directory: /home/srikar/Portfolio-Website
 
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Deploy to Server
-      run: |
-        scp -o StrictHostKeyChecking=no -r /home/srikar/Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
-        ssh -o StrictHostKeyChecking=no srikar@76.84.212.254 << 'EOF'
-          /home/srikar/deploy.sh
-        EOF
+      - name: Deploy to Server
+        run: |
+          scp -o StrictHostKeyChecking=no -r /home/srikar/Portfolio-Website/dist/portfolio-website/* srikar@76.84.212.254:/path/to/nginx/html
+          ssh -o StrictHostKeyChecking=no srikar@76.84.212.254 << 'EOF'
+            /home/srikar/deploy.sh
+          EOF
