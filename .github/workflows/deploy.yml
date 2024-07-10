@@ -13,19 +13,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+          echo "Host ${{ secrets.SERVER_IP }}\n  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
+          chmod 400 ~/.ssh/config
+
       - name: SSH into Server and Deploy
-        uses: appleboy/ssh-action@v0.1.1
-        with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
+        run: |
+          ssh -vvv ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }} '
             set -ex
-            ssh -vvv -i /path/to/private/key $USER@$HOST
             cd /home/srikar/Portfolio-Website
             git pull origin master
             npm install
             npx ng build --configuration production
             cd /home/srikar/
             ./deploy.sh
-
+          '
