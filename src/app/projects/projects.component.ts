@@ -12,16 +12,16 @@ export class ProjectsComponent {
       description: 'Created a super cool e-commerce website with React, MongoDB, Node.js, and Express where you can buy and sell bikes—or literally anything else that tickles your fancy! 🚴‍♂️🛒😄',
       image: 'assets/projects/project1.jpg',
       link: 'https://example.com/project1',
-      source: 'https://github.com/yourusername/project1',
-      hasDemo: true
+      source: 'https://github.com/srikarch123/TardisBikesReact',
+      hasDemo: false
     },
     {
       title: 'Personal Video Calling App',
       description: 'We all love Zoom and Teams, but ever wondered how video calling actually works? I dove into the nerdy magic with Socket.io and WebRTC to make it happen—check it out and prepare to be amazed! 🚀😂',
       image: 'assets/projects/project2.jpg',
       link: 'https://example.com/project2',
-      source: 'https://github.com/yourusername/project2',
-      hasDemo: true
+      source: 'https://github.com/srikarch123',
+      hasDemo: false
     },
     {
       title: 'The Crazy Ransomware',
@@ -35,7 +35,7 @@ export class ProjectsComponent {
       description: 'I m sure you are digging how this portfolio website looks! Want to peek behind the curtain? Check out the source code—crafted with Angular 17, Bootstrap, and all the fun stuff. It s like web development magic, but with fewer rabbits. 🐰✨',
       image: 'assets/projects/project3.jpg',
       link: 'https://example.com/project3',
-      source: 'https://github.com/yourusername/project3',
+      source: 'https://github.com/srikarch123/Portfolio-Website',
       hasDemo: false 
     }
   ];
