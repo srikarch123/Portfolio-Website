@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
   skills = [
     { name: 'Angular', icon: 'fab fa-angular', color: '#dd1b16' },
-    { name: 'TypeScript', icon: 'assets/logos/typescript.svg', isSvg: true },
+    { name: 'TypeScript', icon: 'assets/skills/typescript.svg', isSvg: true },
     { name: 'JavaScript', icon: 'fab fa-js', color: '#f7df1e' },
     { name: 'HTML5', icon: 'fab fa-html5', color: '#e34f26' },
     { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#1572b6' },
@@ -25,7 +25,7 @@ export class SkillsComponent {
     { name: 'PostgreSQL', icon: 'fas fa-database', color: '#336791' },
     { name: 'Azure', icon: 'fab fa-microsoft', color: '#0078d4' },
     { name: 'Docker', icon: 'fab fa-docker', color: '#2496ed' },
-    { name: 'Kubernetes', icon: 'fab fa-kubernetes', color: '#326ce5' },
+    { name: 'Kubernetes', icon: 'assets/skills/kubernates.svg', isSvg: true },
     { name: 'JIRA', icon: 'fab fa-jira', color: '#0052cc' },
     { name: 'Spring', icon: 'fab fa-java', color: '#6db33f' },
     { name: 'Hibernate', icon: 'fas fa-leaf', color: '#59666c' },
