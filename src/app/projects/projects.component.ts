@@ -9,7 +9,7 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Tardis Bike Website',
-      description: 'Created a super cool e-commerce website with React, MongoDB, Node.js, and Express where you can buy and sell bikes—or literally anything else that tickles your fancy! 🚴‍♂️🛒😄',
+      description: 'Developed a dynamic e-commerce platform using React, MongoDB, Node.js, and Express, enabling users to buy and sell a wide variety of items, including bicycles. The application features a robust and user-friendly interface, ensuring a seamless shopping experience.',
       image: 'assets/projects/tardisbikes.png',
       link: 'https://example.com/project1',
       source: 'https://github.com/srikarch123/TardisBikesReact',
@@ -17,7 +17,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Personal Video Calling App',
-      description: 'We all love Zoom and Teams, but ever wondered how video calling actually works? I dove into the nerdy magic with Socket.io and WebRTC to make it happen—check it out and prepare to be amazed! 🚀😂',
+      description: 'Explored the underlying technology of video calling by utilizing Socket.io and WebRTC. This project demonstrates the technical intricacies of real-time video communication, providing insights into the implementation and functionality of video calling applications like Zoom and Teams. Check it out for a deeper understanding of this fascinating technology.',
       image: 'assets/projects/videocalling.png',
       link: 'https://example.com/project2',
       source: 'https://github.com/srikarch123',
@@ -25,14 +25,14 @@ export class ProjectsComponent {
     },
     {
       title: 'The Crazy Ransomware',
-      description: 'We all know ransomware is no joke, but I built one as a Network Security course project! Dont worry, I dont have a demo for you to freak out over. But if you are curious, you can download it and see how files get encrypted with the RSA algorithm—no ransom needed to decrypt them. Not so scary after all, right? 😄🔐',
+      description: 'For a Network Security course project, I developed a ransomware application to demonstrate the encryption process. Utilizing the RSA algorithm, this project shows how files can be securely encrypted and decrypted without requiring a ransom. While there is no live demo to worry about, you can download the project to see the encryption in action. It is a fascinating exploration of cybersecurity principles in a controlled environment.',
       image: 'assets/projects/rasomware.png',
       source: 'https://github.com/srikarch123/Crazy-Ransomware',
       hasDemo: false
     },
     {
       title: 'This Portfolio Website',
-      description: 'I m sure you are digging how this portfolio website looks! Want to peek behind the curtain? Check out the source code—crafted with Angular 17, Bootstrap, and all the fun stuff. It s like web development magic, but with fewer rabbits. 🐰✨',
+      description: 'I hope you are enjoying the design of this portfolio website! If you are curious about how it was built, feel free to check out the source code. Crafted with Angular 17 and Bootstrap, it is a showcase of modern web development techniques. Dive in to explore the magic behind the scenes, minus the rabbits. 🐰✨',
       image: 'assets/projects/portfolio.png',
       link: 'https://example.com/project3',
       source: 'https://github.com/srikarch123/Portfolio-Website',
