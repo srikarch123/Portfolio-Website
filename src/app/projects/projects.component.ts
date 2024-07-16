@@ -25,7 +25,7 @@ export class ProjectsComponent {
     },
     {
       title: 'The Crazy Ransomware',
-      description: 'For a Network Security course project, I developed a platform independent Java ransomware application to demonstrate the encryption process. Utilizing the SHA256 algorithm, this project shows how files can be securely encrypted and decrypted. While there is no live demo to worry about, you can download the project to see the encryption in action. It is a fascinating exploration of cybersecurity principles in a controlled environment.',
+      description: 'For a Network Security course project, I developed a platform independent Java ransomware application to demonstrate the encryption process. Utilizing the AES algorithm, this project shows how files can be securely encrypted and decrypted. While there is no live demo to worry about, you can download the project to see the encryption in action. It is a fascinating exploration of cybersecurity principles in a controlled environment.',
       image: 'assets/projects/rasomware.png',
       source: 'https://github.com/srikarch123/Crazy-Ransomware',
       hasDemo: false
